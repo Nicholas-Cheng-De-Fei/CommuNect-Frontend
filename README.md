@@ -1,2 +1,3 @@
-# CommuNect
-Hack 4 good
+```
+npm install 
+```

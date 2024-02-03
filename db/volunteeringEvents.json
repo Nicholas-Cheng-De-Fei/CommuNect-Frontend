@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Art with a Heart",
+    "dates": "2024-03-20",
+    "start_time": "09:00 AM",
+    "end_time": "12:00 PM",
+    "exp": 100
+  },
+  {
+    "name": "Beach Cleanup Drive",
+    "dates": "2024-03-25",
+    "start_time": "08:00 AM",
+    "end_time": "11:00 AM",
+    "exp": 120
+  },
+  {
+    "name": "Community Gardening",
+    "dates": "2024-03-30",
+    "start_time": "07:30 AM",
+    "end_time": "10:30 AM",
+    "exp": 90
+  }
+]

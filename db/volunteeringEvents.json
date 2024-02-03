@@ -1,23 +1,95 @@
 [
   {
+    "id": 1,
     "name": "Art with a Heart",
-    "dates": "2024-03-20",
-    "start_time": "09:00 AM",
-    "end_time": "12:00 PM",
-    "exp": 100
+    "sessions": [
+      {
+        "date": "2024-03-20",
+        "start_time": "09:00 AM",
+        "end_time": "12:00 PM",
+        "status": "attended"
+      },
+      {
+        "date": "2024-03-27",
+        "start_time": "09:00 AM",
+        "end_time": "12:00 PM",
+        "status": "upcoming"
+      }
+    ],
+    "location": "City Art Center, 123 Art Street",
+    "description": "A creative workshop for children, aiming to spread love through art. Volunteers will assist in setup, guiding children, and art material distribution across multiple sessions.",
+    "requirements": {
+      "age": "18+",
+      "skills": ["Creativity", "Patience", "Experience with children"]
+    },
+    "contact": {
+      "name": "Jane Doe",
+      "email": "jane.doe@example.com",
+      "phone": "555-1234"
+    },
+    "tasks": ["Setup", "Material Distribution", "Guidance", "Cleanup"],
+    "materials_needed": ["None"],
+    "exp": 100,
+    "image": "../assets/cover.jpg"
   },
   {
+    "id": 2,
     "name": "Beach Cleanup Drive",
-    "dates": "2024-03-25",
-    "start_time": "08:00 AM",
-    "end_time": "11:00 AM",
-    "exp": 120
+    "sessions": [
+      {
+        "date": "2024-03-25",
+        "start_time": "08:00 AM",
+        "end_time": "11:00 AM",
+        "status": "attended"
+      }
+    ],
+    "location": "Sunny Beach, West Coast",
+    "description": "Join us to clean Sunny Beach and help protect marine life. Volunteers will collect trash, sort recyclables, and learn about environmental conservation.",
+    "requirements": {
+      "age": "16+",
+      "skills": ["Teamwork", "Environmental Awareness"]
+    },
+    "contact": {
+      "name": "John Smith",
+      "email": "john.smith@example.com",
+      "phone": "555-6789"
+    },
+    "tasks": ["Trash Collection", "Sorting Recyclables", "Data Collection"],
+    "materials_needed": ["Gloves", "Recyclable Bags"],
+    "exp": 120,
+    "image": "../assets/cover.jpg"
   },
   {
+    "id": 3,
     "name": "Community Gardening",
-    "dates": "2024-03-30",
-    "start_time": "07:30 AM",
-    "end_time": "10:30 AM",
-    "exp": 90
+    "sessions": [
+      {
+        "date": "2024-03-30",
+        "start_time": "07:30 AM",
+        "end_time": "10:30 AM",
+        "status": "attended"
+      },
+      {
+        "date": "2024-04-06",
+        "start_time": "07:30 AM",
+        "end_time": "10:30 AM",
+        "status": "upcoming"
+      }
+    ],
+    "location": "Greenfield Park, 456 Garden Ave",
+    "description": "Help grow our community garden! Activities include planting, watering, and garden maintenance. Learn about sustainable gardening practices across multiple sessions.",
+    "requirements": {
+      "age": "15+",
+      "skills": ["Gardening Interest", "Physical Fitness for light tasks"]
+    },
+    "contact": {
+      "name": "Emma Wilson",
+      "email": "emma.wilson@example.com",
+      "phone": "555-9876"
+    },
+    "tasks": ["Planting", "Watering", "Weeding", "Composting"],
+    "materials_needed": ["Gardening Gloves", "Water Bottles", "Hat"],
+    "exp": 90,
+    "image": "../assets/cover.jpg"
   }
 ]

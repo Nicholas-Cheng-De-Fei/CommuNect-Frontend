@@ -1,7 +1,7 @@
 import { StyleSheet, View, Pressable, TouchableOpacity } from "react-native";
 import React from "react";
 import { Text, Avatar, Icon } from "react-native-paper";
-import { router } from 'expo-router';
+import { router } from "expo-router";
 
 const Sidebar = () => {
   return (
@@ -14,17 +14,37 @@ const Sidebar = () => {
       <View style={styles.divider} />
 
       <View style={styles.options}>
-        <Pressable style={[styles.option, styles.optionWithIcon]}>
+        <Pressable
+          style={[styles.option, styles.optionWithIcon]}
+          onPress={() => router.replace("/home")}
+        >
           <Icon source="calendar" size={24} style={styles.optionIcon} />
           <Text style={styles.optionText}>Events</Text>
         </Pressable>
-        <Pressable style={[styles.option, styles.optionWithIcon]}>
+        <Pressable
+          style={[styles.option, styles.optionWithIcon]}
+          onPress={() => router.replace("/home")}
+        >
           <Icon source="account-group" size={24} style={styles.optionIcon} />
           <Text style={styles.optionText}>My Community</Text>
         </Pressable>
-        <Pressable style={[styles.option, styles.optionWithIcon]}
-        onPress={() => router.replace('/login')}
-        
+        <Pressable
+          style={[styles.option, styles.optionWithIcon]}
+          onPress={() => router.replace("/home")}
+        >
+          <Icon source="trophy" size={24} style={styles.optionIcon} />
+          <Text style={styles.optionText}>Achievements</Text>
+        </Pressable>
+        <Pressable
+          style={[styles.option, styles.optionWithIcon]}
+          onPress={() => router.replace("/home")}
+        >
+          <Icon source="form-select" size={24} style={styles.optionIcon} />
+          <Text style={styles.optionText}>Surveys</Text>
+        </Pressable>
+        <Pressable
+          style={[styles.option, styles.optionWithIcon]}
+          onPress={() => router.replace("/login")}
         >
           <Icon source="exit-to-app" size={24} style={styles.optionIcon} />
           <Text style={styles.optionText}>Log out</Text>
@@ -51,7 +71,7 @@ const styles = StyleSheet.create({
   },
   name: {
     marginLeft: 20,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     fontSize: 18,
   },
   divider: {

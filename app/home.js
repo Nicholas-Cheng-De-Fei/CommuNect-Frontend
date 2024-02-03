@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
 
   },
   content: {
-    flex: 3,
+    flex: 4,
     padding: 40,
     margin:40,
   },

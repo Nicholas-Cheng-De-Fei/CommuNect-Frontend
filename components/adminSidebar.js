@@ -3,7 +3,7 @@ import React from "react";
 import { Text, Avatar, Icon } from "react-native-paper";
 import { router } from "expo-router";
 
-const Sidebar = () => {
+const AdminSidebar = () => {
   return (
     <View style={styles.container}>
       <Pressable style={styles.accountButton}>
@@ -16,35 +16,35 @@ const Sidebar = () => {
       <View style={styles.options}>
       <Pressable
           style={[styles.option, styles.optionWithIcon]}
-          onPress={() => router.replace("/home")}
+          onPress={() => router.replace("/admin")}
         >
-          <Icon source="home" size={24} style={styles.optionIcon} />
-          <Text style={styles.optionText}>Home</Text>
+          <Icon source="monitor-dashboard" size={24} style={styles.optionIcon} />
+          <Text style={styles.optionText}>Dashboard</Text>
         </Pressable>
         <Pressable
           style={[styles.option, styles.optionWithIcon]}
-          onPress={() => router.replace("/home")}
+          onPress={() => router.replace("/admin")}
         >
           <Icon source="calendar" size={24} style={styles.optionIcon} />
           <Text style={styles.optionText}>Events</Text>
         </Pressable>
         <Pressable
           style={[styles.option, styles.optionWithIcon]}
-          onPress={() => router.replace("/home")}
+          onPress={() => router.replace("/admin")}
         >
           <Icon source="account-group" size={24} style={styles.optionIcon} />
           <Text style={styles.optionText}>My Community</Text>
         </Pressable>
         <Pressable
           style={[styles.option, styles.optionWithIcon]}
-          onPress={() => router.replace("/home")}
+          onPress={() => router.replace("/admin")}
         >
           <Icon source="trophy" size={24} style={styles.optionIcon} />
           <Text style={styles.optionText}>Achievements</Text>
         </Pressable>
         <Pressable
           style={[styles.option, styles.optionWithIcon]}
-          onPress={() => router.replace("/home")}
+          onPress={() => router.replace("/admin")}
         >
           <Icon source="form-select" size={24} style={styles.optionIcon} />
           <Text style={styles.optionText}>Surveys</Text>
@@ -106,4 +106,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Sidebar;
+export default AdminSidebar;

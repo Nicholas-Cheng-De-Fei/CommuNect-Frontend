@@ -7,6 +7,14 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const handlePress = () => {
+    if (email === "admin") {
+      router.replace("/admin");
+    } else {
+    router.replace("/home");
+    }
+  }
+
   return (
     <View style={styles.container}>
       <Image source={require("../assets/cover.jpg")} style={styles.image} />
@@ -31,7 +39,7 @@ const Login = () => {
         />
         <Button
           mode="contained"
-          onPress={() => router.replace('/home')}
+          onPress={() => handlePress()}
           style={styles.button}
         >
           Continue

@@ -62,7 +62,9 @@ const Event = () => {
           </DataTable>
         </View>
         <View style={styles.buttons}>
-          <Button mode="contained" style={{ marginTop: 20, backgroundColor: "#6200ee" }}>
+          <Button mode="contained" style={{ marginTop: 20, backgroundColor: "#6200ee" }}
+          onPress={() => alert("Downloaded")}
+          >
             Download Progress Report
           </Button>
           <Button mode="contained" style={{ marginTop: 20, backgroundColor: "#6200ee"}}>
@@ -86,7 +88,7 @@ const styles = StyleSheet.create({
     marginBottom: 20, // Space between image and text
   },
   content: {
-    flex: 2,
+    flex: 4,
     padding: 20,
     flexDirection: "row",
   },

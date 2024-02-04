@@ -30,7 +30,7 @@
     "tasks": ["Setup", "Material Distribution", "Guidance", "Cleanup"],
     "materials_needed": ["None"],
     "exp": 100,
-    "image": "../assets/cover.jpg"
+    "image": "../assets/cover_1.jpg"
   },
   {
     "id": 2,
@@ -57,7 +57,7 @@
     "tasks": ["Trash Collection", "Sorting Recyclables", "Data Collection"],
     "materials_needed": ["Gloves", "Recyclable Bags"],
     "exp": 120,
-    "image": "../assets/cover.jpg"
+    "image": "../assets/cover_2.jpg"
   },
   {
     "id": 3,

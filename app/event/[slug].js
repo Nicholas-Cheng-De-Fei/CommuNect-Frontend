@@ -9,10 +9,12 @@ const Event = () => {
   const { slug } = useLocalSearchParams();
   const event = eventsData.find((event) => event.id.toString() === slug);
 
-  if (!event) {
+  if (!event) {   
+
     return (
       <View style={styles.container}>
-        <Text>Event not found</Text>
+
+        <Text>Ev ent not found</Text>
       </View>
     );
   }

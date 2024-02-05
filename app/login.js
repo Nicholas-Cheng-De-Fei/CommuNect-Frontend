@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StyleSheet, View, Image } from "react-native";
+import { StyleSheet, View, Image, KeyboardAvoidingView, Platform, ScrollView } from "react-native";
 import { Text, TextInput, Button } from "react-native-paper";
 import { router } from "expo-router";
 
@@ -11,44 +11,52 @@ const Login = () => {
     if (email === "admin") {
       router.replace("/admin");
     } else {
-    router.replace("/home");
+      router.replace("/home");
     }
   }
 
   return (
-    <View style={styles.container}>
-      <Image source={require("../assets/cover.jpg")} style={styles.image} />
-      <View style={styles.form}>
-        <Text style={styles.welcomeText}>Welcome back</Text>
-        <TextInput
-          label="Email address"
-          value={email}
-          onChangeText={setEmail}
-          mode="outlined"
-          style={styles.formInput}
-          autoCapitalize="none"
-          keyboardType="email-address"
-        />
-        <TextInput
-          label="Password"
-          value={password}
-          onChangeText={setPassword}
-          mode="outlined"
-          secureTextEntry
-          style={styles.formInput}
-        />
-        <Button
-          mode="contained"
-          onPress={() => handlePress()}
-          style={styles.button}
-        >
-          Continue
-        </Button>
-      </View>
-    </View>
+    <KeyboardAvoidingView
+      behavior={Platform.OS === "ios" ? "padding" : "height"}
+      style={{flex: 1}}
+    >
+      <ScrollView contentContainerStyle={styles.container}>
+        <Image source={require("../assets/cover.jpg")} style={styles.image} />
+        <View style={styles.form}>
+          <Text style={styles.welcomeText}>Welcome Back</Text>
+          <TextInput
+            label="Email Address"
+            value={email}
+            onChangeText={setEmail}
+            mode="outlined"
+            style={styles.formInput}
+            autoCapitalize="none"
+            keyboardType="email-address"
+            accessibilityLabel="Email Address Input"
+          />
+          <TextInput
+            label="Password"
+            value={password}
+            onChangeText={setPassword}
+            mode="outlined"
+            secureTextEntry
+            style={styles.formInput}
+            accessibilityLabel="Password Input"
+          />
+          <Button
+            mode="contained"
+            onPress={handlePress}
+            style={styles.button}
+            accessibilityLabel="Login Button"
+          >
+            Continue
+          </Button>
+        </View>
+      </ScrollView>
+    </KeyboardAvoidingView>
   );
 };
-
+  
 const styles = StyleSheet.create({
   container: {
     flex: 1,

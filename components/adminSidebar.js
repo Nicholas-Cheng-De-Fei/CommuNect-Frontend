@@ -39,6 +39,13 @@ const AdminSidebar = () => {
           style={[styles.option, styles.optionWithIcon]}
           onPress={() => router.replace("/admin")}
         >
+          <Icon source="account-multiple" size={24} style={styles.optionIcon} />
+          <Text style={styles.optionText}>Manage Users</Text>
+        </Pressable>
+        <Pressable
+          style={[styles.option, styles.optionWithIcon]}
+          onPress={() => router.replace("/admin")}
+        >
           <Icon source="trophy" size={24} style={styles.optionIcon} />
           <Text style={styles.optionText}>Achievements</Text>
         </Pressable>

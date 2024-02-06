@@ -21,12 +21,6 @@ const Event = () => {
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      {/* Display Cover Image */}
-      <Image
-        source={{ uri: event.image }}
-        style={styles.coverImage}
-        resizeMode="cover"
-      />
       <View style={styles.content}>
         <View style={styles.leftContent}>
           <Text style={styles.title}>{event.name}</Text>
@@ -81,6 +75,8 @@ const Event = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    padding: 20,
+    marginTop: 20,
   },
   coverImage: {
     flex: 1,

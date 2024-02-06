@@ -4,16 +4,14 @@ import React from "react"; // Import React
 import { View, ScrollView, StyleSheet, Image } from "react-native"; // Import components from react-native
 import { Text, DataTable, Icon, Button } from "react-native-paper"; // Import Text from react-native-paper
 import eventsData from "../../../db/volunteeringEvents.json"; // Ensure this path is correct
-
+import volunteersData from "../../../db/volunteers.json"; // Ensure this path is correct
 const Event = () => {
   const { slug } = useLocalSearchParams();
   const event = eventsData.find((event) => event.id.toString() === slug);
 
-  if (!event) {   
-
+  if (!event) {
     return (
       <View style={styles.container}>
-
         <Text>Event not found</Text>
       </View>
     );
@@ -31,40 +29,76 @@ const Event = () => {
           <Text style={styles.detail}>Location: {event.location}</Text>
           <Text style={styles.description}>{event.description}</Text>
 
-          <DataTable>
-            <DataTable.Header>
-              <DataTable.Title>Session</DataTable.Title>
-              <DataTable.Title>Date</DataTable.Title>
-              <DataTable.Title>Time</DataTable.Title>
-              <DataTable.Title>Status</DataTable.Title>
-            </DataTable.Header>
+          <View style={styles.datatable}>
+            <Text variant="labelLarge">Sessions</Text>
+            <DataTable>
+              <DataTable.Header>
+                <DataTable.Title>Session</DataTable.Title>
+                <DataTable.Title>Date</DataTable.Title>
+                <DataTable.Title>Time</DataTable.Title>
+                <DataTable.Title>Completed</DataTable.Title>
+              </DataTable.Header>
 
-            {event.sessions.map((session, index) => (
-              <DataTable.Row key={index}>
-                <DataTable.Cell>{index + 1}</DataTable.Cell>
-                <DataTable.Cell>{session.date}</DataTable.Cell>
-                <DataTable.Cell>
-                  {session.start_time} - {session.end_time}
-                </DataTable.Cell>
-                <DataTable.Cell>
-                  {session.status === "attended" ? (
-                    <Icon source="check" />
-                  ) : (
-                    <Icon source="progress-check" />
-                  )}
-                </DataTable.Cell>
-              </DataTable.Row>
-            ))}
-          </DataTable>
+              {event.sessions.map((session, index) => (
+                <DataTable.Row key={index}>
+                  <DataTable.Cell>{index + 1}</DataTable.Cell>
+                  <DataTable.Cell>{session.date}</DataTable.Cell>
+                  <DataTable.Cell>
+                    {session.start_time} - {session.end_time}
+                  </DataTable.Cell>
+                  <DataTable.Cell>
+                    {session.status === "attended" ? (
+                      <Icon source="check" />
+                    ) : (
+                      <Icon source="progress-check" />
+                    )}
+                  </DataTable.Cell>
+                </DataTable.Row>
+              ))}
+            </DataTable>
+          </View>
+          <View>
+            <Text variant="labelLarge" style={styles.datatable}>
+              Volunteers
+            </Text>
+            <DataTable>
+              <DataTable.Header>
+                <DataTable.Title>Name</DataTable.Title>
+                <DataTable.Title>Age</DataTable.Title>
+                <DataTable.Title>Sessions Completed</DataTable.Title>
+                <DataTable.Title>Last Session</DataTable.Title>
+                <DataTable.Title>Details</DataTable.Title>
+              </DataTable.Header>
+
+              {volunteersData.map((volunteer, index) => (
+                <DataTable.Row key={index}>
+                  <DataTable.Cell>{volunteer.name}</DataTable.Cell>
+                  <DataTable.Cell>{volunteer.age}</DataTable.Cell>
+                  <DataTable.Cell>{volunteer.sessions_attended}</DataTable.Cell>
+                  <DataTable.Cell>{volunteer.last_session_attended}</DataTable.Cell>
+                  <DataTable.Cell>
+                    <Button style={styles.button}>
+                      <Text>View</Text>
+                    </Button>
+                  </DataTable.Cell>
+                </DataTable.Row>
+              ))}
+            </DataTable>
+          </View>
         </View>
         <View style={styles.buttons}>
-          <Button mode="contained" style={{ marginTop: 20, backgroundColor: "#6200ee" }}
-          onPress={() => alert("Downloaded")}
+          <Button
+            mode="contained"
+            style={{ marginTop: 20, backgroundColor: "#6200ee" }}
+            onPress={() => alert("Downloaded")}
           >
-            Download Progress Report
+            Download Event Report
           </Button>
-          <Button mode="contained" style={{ marginTop: 20, backgroundColor: "#6200ee"}}>
-            Withdraw
+          <Button
+            mode="contained"
+            style={{ marginTop: 20, backgroundColor: "#6200ee" }}
+          >
+            Edit
           </Button>
         </View>
       </View>
@@ -75,8 +109,7 @@ const Event = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 20,
-    marginTop: 20,
+    margin: 20,
   },
   coverImage: {
     flex: 1,
@@ -99,16 +132,22 @@ const styles = StyleSheet.create({
     fontSize: 18,
     marginVertical: 4,
   },
-    leftContent: {
-        flex: 3,
-    },
+  leftContent: {
+    flex: 3,
+  },
   buttons: {
     flex: 1,
     padding: 20,
   },
+  button: {
+    alignSelf: "auto",
+  },
   description: {
     fontSize: 16,
     marginTop: 8,
+  },
+  datatable: {
+    marginTop: 20,
   },
 });
 

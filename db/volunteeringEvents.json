@@ -2,6 +2,7 @@
   {
     "id": 1,
     "name": "Art with a Heart",
+    "organization": "Art for All Foundation",
     "sessions": [
       {
         "date": "2024-03-20",
@@ -35,6 +36,7 @@
   {
     "id": 2,
     "name": "Beach Cleanup Drive",
+    "organization": "Ocean Conservation Society",
     "sessions": [
       {
         "date": "2024-03-25",
@@ -62,6 +64,7 @@
   {
     "id": 3,
     "name": "Community Gardening",
+    "organization": "Greenfield Community Center",
     "sessions": [
       {
         "date": "2024-03-30",
@@ -91,5 +94,73 @@
     "materials_needed": ["Gardening Gloves", "Water Bottles", "Hat"],
     "exp": 90,
     "image": "../assets/cover.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Library Assistance Program",
+    "organization": "Central Library",
+    "sessions": [
+      {
+        "date": "2024-04-15",
+        "start_time": "10:00 AM",
+        "end_time": "02:00 PM",
+        "status": "upcoming"
+      },
+      {
+        "date": "2024-04-22",
+        "start_time": "10:00 AM",
+        "end_time": "02:00 PM",
+        "status": "upcoming"
+      }
+    ],
+    "location": "Central Library, 789 Book Lane",
+    "description": "Support our local library's daily operations and special events. Volunteers will assist with book sorting, shelf organization, and helping patrons. This is a wonderful opportunity to contribute to the community's educational resources.",
+    "requirements": {
+      "age": "16+",
+      "skills": ["Organizational skills", "Customer service"]
+    },
+    "contact": {
+      "name": "Alice Brown",
+      "email": "alice.brown@example.com",
+      "phone": "555-2345"
+    },
+    "tasks": ["Book Sorting", "Shelf Organization", "Patron Assistance"],
+    "materials_needed": ["None"],
+    "exp": 80,
+    "image": "../assets/cover_3.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Tech Education for Seniors",
+    "organization": "Senior Center",
+    "sessions": [
+      {
+        "date": "2024-04-18",
+        "start_time": "01:00 PM",
+        "end_time": "04:00 PM",
+        "status": "upcoming"
+      },
+      {
+        "date": "2024-04-25",
+        "start_time": "01:00 PM",
+        "end_time": "04:00 PM",
+        "status": "upcoming"
+      }
+    ],
+    "location": "Senior Center, 321 Wisdom Way",
+    "description": "Help bridge the digital divide by teaching seniors how to use technology. From smartphones to social media, contribute to enhancing their digital literacy and connectivity.",
+    "requirements": {
+      "age": "18+",
+      "skills": ["Patience", "Tech-savvy", "Teaching"]
+    },
+    "contact": {
+      "name": "Bob Carter",
+      "email": "bob.carter@example.com",
+      "phone": "555-3456"
+    },
+    "tasks": ["Tech Teaching", "Q&A Support", "Setup Assistance"],
+    "materials_needed": ["Laptops (provided)", "Instruction Manuals"],
+    "exp": 110,
+    "image": "../assets/cover_4.jpg"
   }
 ]

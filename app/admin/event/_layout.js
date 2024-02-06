@@ -4,7 +4,7 @@ import {
   PaperProvider,
 } from "react-native-paper";
 import { StyleSheet, View } from "react-native";
-import Sidebar from "../../components/user/sidebar";
+import AdminSidebar from "../../../components/admin/adminSidebar";
 
 const theme = {
   ...DefaultTheme,
@@ -20,7 +20,7 @@ const defaultLayout = () => {
     <PaperProvider theme={theme}>
       <View style={styles.container}>
         <View style={styles.sidebar}>
-          <Sidebar />
+          <AdminSidebar />
         </View>
         <View style={styles.content}>
           <Slot name="main" />

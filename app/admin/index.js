@@ -1,7 +1,7 @@
 import { StyleSheet, View } from 'react-native';
-import { Text } from 'react-native-paper';
-import MyEvents from '../components/myEvents';
-import AdminSidebar from '../components/adminSidebar';
+import { Card, Text } from 'react-native-paper';
+import AdminEvents from '../../components/admin/adminEvents';
+import AdminSidebar from '../../components/admin/adminSidebar';
 const Admin = () => {
   return (
     <View style={styles.container}>
@@ -9,8 +9,7 @@ const Admin = () => {
         <AdminSidebar />
       </View>
       <View style={styles.content}>
-        <Text variant='headlineLarge'>Welcome back, John Doe</Text>
-        <MyEvents />
+        <AdminEvents/>
       </View>
     </View>
   );
@@ -20,17 +19,16 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'row',
+    flexWrap: 'wrap',
   },
   sidebar: {
     flex: 1,
     padding: 40,
-    margin:40,
 
   },
   content: {
     flex: 4,
     padding: 40,
-    margin:40,
   },
 });
 

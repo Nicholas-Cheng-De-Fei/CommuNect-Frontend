@@ -1,17 +1,11 @@
 import { StyleSheet, View } from 'react-native';
 import { Text } from 'react-native-paper';
-import UserManagementDashboard from '../components/UserManagementDashboard';
-import Sidebar from '../components/user/sidebar';
+import UserManagementDashboard from '../../components/UserManagementDashboard';
 const UserManagement = () => {
   return (
     <View style={styles.container}>
-      <View style={styles.sidebar}>
-        <Sidebar />
-      </View>
-      <View style={styles.content}>
-        <Text variant='headlineLarge'>Welcome back, John Doe</Text>
+        <Text>Users</Text>
         <UserManagementDashboard />
-      </View>
     </View>
   );
 }

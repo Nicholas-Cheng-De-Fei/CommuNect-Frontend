@@ -1,17 +1,14 @@
 import { StyleSheet, View } from 'react-native';
 import { Text } from 'react-native-paper';
-import MyEvents from '../components/myEvents';
-import AdminSidebar from '../components/adminSidebar';
-const Admin = () => {
+
+import UserManagementDashboard from '../components/UserManagementDashboard';
+import Sidebar from '../components/adminSidebar';
+
+const UserManagement = () => {
   return (
     <View style={styles.container}>
-      <View style={styles.sidebar}>
-        <AdminSidebar />
-      </View>
-      <View style={styles.content}>
-        <Text variant='headlineLarge'>Welcome back, John Doe</Text>
-        <MyEvents />
-      </View>
+        <Text>Users</Text>
+        <UserManagementDashboard />
     </View>
   );
 }
@@ -35,4 +32,4 @@ const styles = StyleSheet.create({
 });
 
 
-export default Admin;
+export default UserManagement;

@@ -40,7 +40,7 @@ const AdminSidebar = () => {
           onPress={() => router.replace("/usermanagement")}
         >
           <Icon source="account-multiple" size={24} style={styles.optionIcon} />
-          <Text style={styles.optionText}>Manage Users</Text>
+          <Text style={styles.optionText}>Volunteers</Text>
         </Pressable>
         <Pressable
           style={[styles.option, styles.optionWithIcon]}

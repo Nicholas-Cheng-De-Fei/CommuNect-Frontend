@@ -1,7 +1,7 @@
 import { StyleSheet, View, Pressable } from "react-native";
 import React, { useState, useMemo } from "react";
 import { Text, Card, SegmentedButtons } from "react-native-paper";
-import eventsData from '../db/volunteeringEvents.json'; // Ensure this path is correct
+import eventsData from '../../db/volunteeringEvents.json'; // Ensure this path is correct
 import { router } from "expo-router";
 const MyEvents = () => {
   const [selectedValue, setSelectedValue] = useState('upcoming');

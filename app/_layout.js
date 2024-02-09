@@ -1,6 +1,5 @@
 import { Slot } from 'expo-router';
 import { MD3LightTheme as DefaultTheme, PaperProvider } from 'react-native-paper';
-import Sidebar from '../components/sidebar';
 
 const theme = {
     ...DefaultTheme,

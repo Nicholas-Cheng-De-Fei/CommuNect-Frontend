@@ -10,4 +10,3 @@
 - Manage users(admin)
 ![image](https://github.com/Nicholas-Cheng-De-Fei/CommuNect-Frontend/assets/142142406/194c0ef2-07d2-4e40-bb53-aea1a44009d3)
 
-![image](https://github.com/Nicholas-Cheng-De-Fei/CommuNect-Frontend/assets/142142406/1dc87b94-3e69-4f80-ac11-717620a20804)

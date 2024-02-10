@@ -1,4 +1,4 @@
-# CommuNect-backend
+# CommuNect
 
 ##Supported Features
 

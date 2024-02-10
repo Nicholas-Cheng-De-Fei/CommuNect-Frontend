@@ -1,7 +1,7 @@
 import { StyleSheet, View } from 'react-native';
 import { Text } from 'react-native-paper';
 import UserManagementDashboard from '../components/CommunityManagementDashboard';
-import Sidebar from '../components/adminSidebar';
+import Sidebar from '../components/admin/adminSidebar';
 const CommunityManagement = () => {
     return (
       <View style={styles.container}>

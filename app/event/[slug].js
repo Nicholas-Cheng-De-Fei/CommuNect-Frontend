@@ -14,7 +14,7 @@ const Event = () => {
     return (
       <View style={styles.container}>
 
-        <Text>Ev ent not found</Text>
+        <Text>Event not found</Text>
       </View>
     );
   }

@@ -1,23 +1,27 @@
 [
   {
+    "id": 1,
     "name": "John Doe",
     "age": 25,
     "sessions_attended": 5,
     "last_session_attended": "2023-11-05"
   },
   {
+    "id": 2,
     "name": "Jane Smith",
     "age": 30,
     "sessions_attended": 3,
     "last_session_attended": "2023-11-05"
   },
   {
+    "id": 3,
     "name": "Alex Johnson",
     "age": 22,
     "sessions_attended": 2,
     "last_session_attended": "2023-12-10"
   },
   {
+    "id": 4,
     "name": "Samantha Lee",
     "age": 28,
     "sessions_attended": 4,

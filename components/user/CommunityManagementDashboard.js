@@ -26,7 +26,7 @@ const CommunityManagementDashboard = () => {
   };
 
   return (
-    <ScrollView contentContainerStyle={styles.container}>
+    <View contentContainerStyle={styles.container}>
       <Card style={styles.card}>
         <TextInput
           label="Search"
@@ -52,7 +52,7 @@ const CommunityManagementDashboard = () => {
           </Card>
         ))}
       </View>
-    </ScrollView>
+    </View>
   );
 };
 

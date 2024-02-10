@@ -1,18 +1,18 @@
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, ScrollView } from 'react-native';
 import { Text } from 'react-native-paper';
-import UserManagementDashboard from '../components/CommunityManagementDashboard';
-import Sidebar from '../components/admin/adminSidebar';
+import CommunityManagementDashboard from '../components/user/CommunityManagementDashboard';
+import Sidebar from '../components/user/sidebar';
 const CommunityManagement = () => {
     return (
-      <View style={styles.container}>
+      <ScrollView contentContainerStyle={styles.container}>
         <View style={styles.sidebar}>
           <Sidebar />
         </View>
         <View style={styles.content}>
-          <Text variant='headlineLarge'>Welcome back, John Doe</Text>
-          <UserManagementDashboard />
+          <Text variant='headlineLarge'>Communities</Text>
+          <CommunityManagementDashboard />
         </View>
-      </View>
+      </ScrollView>
     );
   }
   
@@ -24,13 +24,11 @@ const CommunityManagement = () => {
     sidebar: {
       flex: 1,
       padding: 40,
-      margin:40,
   
     },
     content: {
       flex: 4,
       padding: 40,
-      margin:40,
     },
   });
   

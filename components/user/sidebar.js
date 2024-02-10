@@ -30,7 +30,7 @@ const Sidebar = () => {
         </Pressable>
         <Pressable
           style={[styles.option, styles.optionWithIcon]}
-          onPress={() => router.replace("/home")}
+          onPress={() => router.replace("/community")}
         >
           <Icon source="account-group" size={24} style={styles.optionIcon} />
           <Text style={styles.optionText}>My Community</Text>

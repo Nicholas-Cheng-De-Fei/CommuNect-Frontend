@@ -19,9 +19,6 @@ const defaultLayout = () => {
   return (
     <PaperProvider theme={theme}>
       <View style={styles.container}>
-        <View style={styles.sidebar}>
-          <AdminSidebar />
-        </View>
         <View style={styles.content}>
           <Slot name="main" />
         </View>
